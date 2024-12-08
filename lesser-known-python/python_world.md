@@ -4,7 +4,7 @@
 
 <figure>
 
-<image src="python_cartoon.png" alt="scary cartoon python" width=250>
+<image src="images/python_cartoon.png" alt="scary cartoon python" width=250>
 
 <figcaption>
 Figure 1: Python in Attack Mode
