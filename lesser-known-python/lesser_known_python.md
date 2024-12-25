@@ -12,6 +12,8 @@ Figure 1: Python in Attack Mode
 
 </figure>
 
+<br>
+
 Today, I spent some time learning some Python fundamentals...
 
 No, I'm not talking about what a `for` loop is, or what the `try...except` block does! I was mostly learning about how Python figures out the value that a name references.
