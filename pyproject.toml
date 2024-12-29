@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "learning-in-markdown"
+version = "0.1.0"
+description = "My mind's encyclopoedia!"
+authors = ["ahmed33033 <ahmed.akod@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.3.13"
+langgraph = "^0.2.60"
+langchain-community = "^0.3.13"
+langchain-google-genai = "^2.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
