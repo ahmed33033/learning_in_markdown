@@ -20,6 +20,7 @@ Additionally, the power of runnables is _implictly_ evident through the beautifu
 
 ```python
 from typing import Any
+from multiprocessing import Pool
 
 class Echo:
     def invoke(self, value: Any) -> Any:
@@ -30,12 +31,13 @@ class Echo:
             yield chunk
 
     def batch(self, args: list[Any]) -> list[Any]:
-        outputs = []
-        for arg in args:
-            outputs.append(self.invoke(arg))
-        return args
+        with Pool(len(args)) as p:
+            outputs = p.map(self.invoke, args)
+        return outputs
 
-echo = Echo()
+if __name__ == "__main__":
+    echo = Echo()
+    print(echo.batch([1,2,3,'hi']))
 ```
 
 Using LangChain, we can get the same functionality with the following:
