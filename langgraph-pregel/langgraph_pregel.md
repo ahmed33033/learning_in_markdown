@@ -6,7 +6,7 @@ Starting with, the [LangGraph glossary][graph-gloss] mentions that their graph's
 
 LangGraph's graph algorithm proceeds in a series of iterations called "super steps". Each iteration consists of a set of nodes executing at the same time. The next super step consists of the next set of nodes executing at the same time.
 
-All nodes start in an `inactive` state. When they receive a message, they become `active`. At the end of a super-step, nodes without incoming messages become `inactive`. The graph terminates when there are no incoming messages.
+All nodes start in an `inactive` state. When they receive a message, they become `active`. At the end of a super-step, nodes without incoming messages become `inactive`. The graph terminates when there are no incoming messages (all nodes are in inactive state).
 
 The stuff about super-steps is inspired by Google's Pregel System.
 
@@ -28,9 +28,11 @@ Concurrency is about executing multiple tasks, such that their executions overla
 
 <img alt="Concurrency diagram" src="images/concur_diag.png">
 
-<figcaption>Source: <a href="https://jenkov.com/tutorials/java-concurrency/concurrency-vs-parallelism.html"> Jenkov </a></figcaption>
+<figcaption>Image Source: <a href="https://jenkov.com/tutorials/java-concurrency/concurrency-vs-parallelism.html"> Jenkov </a></figcaption>
 
 </figure>
+
+<br>
 
 Parallelism generally refers to executing multiple tasks in parallel.
 
@@ -47,17 +49,19 @@ Some definitions cite that concurrency doesn't always imply parallelism, and vic
 
 A program is an executable file composed of a set of instructions.
 
-When a program is loaded into memory and executed, it becomes a process. A process runs on its own memory space, which isolates it from other processes.
+When a program is loaded into memory and executed, it becomes a process. So, a processes is an instance of a program, along with a set of resources to execute the program. A process runs on its own memory space, which isolates it from other processes.
 
 A process contains at least one thread, called the main thread. Threads are the units of execution that execute instructions. They contain a program counter along with other registers, and the stack. Threads of the same process share a memory space.
 
 <figure>
 <img alt="Processes and Threads diagram" src="images/byte_process.png">
 
-<figcaption> Source: <a href="https://www.youtube.com/watch?v=4rLW7zg21gI&t=110s">  ByteByteGo </a> </figcaption>
+<figcaption> Image Source: <a href="https://www.youtube.com/watch?v=4rLW7zg21gI&t=110s">  ByteByteGo </a> </figcaption>
 </figure>
 
-_Context switching_ is about running multiple processes or threads concurrently. It involves saving the current state of a process or thread, and switching to execute, or continue executing another process or thread.
+<br>
+
+_Context switching_ is about running multiple processes or threads concurrently. It involves the OS saving the current state of a process or thread, and switching to execute, or continue executing another process or thread.
 
 > Source:\
 > [ByteByteGo](https://www.youtube.com/watch?v=4rLW7zg21gI)
@@ -72,10 +76,10 @@ One might ask about the benefits of using threads compared to your average ol' a
 - Each thread can have its own event-loop, giving it the ability to implement asyncronous programming per thread.
 - Asyncronous programming means async functions and awaiting coroutines and creating tasks. It changes your code.
 
-On the other hand, Processes in Python are inteded for CPU-intensive tasks.
+On the other hand, Processes in Python are inteded for CPU-intensive tasks. Moreover, objects passed between processes must be serializable.
 
 > Source:\
-> [superfastpython from Jason Brownlee](https://superfastpython.com/threadpoolexecutor-vs-asyncio/)\
+> [superfastpython from Jason Brownlee](https://superfastpython.com/threadpoolexecutor-vs-asyncio/)
 
 <!--Links-->
 
