@@ -81,6 +81,10 @@ On the other hand, Processes in Python are inteded for CPU-intensive tasks. More
 > Source:\
 > [superfastpython from Jason Brownlee](https://superfastpython.com/threadpoolexecutor-vs-asyncio/)
 
+**New:** Python 3.13 released an experimental "free-threaded" mode that allows you to run threads in parallel, using multiple processors.
+
+The code_examples folder shows examples for a method that is called using different processes, threads, and using async programming.
+
 <!--Links-->
 
 [graph-gloss]: https://langchain-ai.github.io/langgraph/concepts/low_level/#langgraph-glossary
