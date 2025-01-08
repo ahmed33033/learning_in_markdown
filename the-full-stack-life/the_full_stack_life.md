@@ -85,3 +85,44 @@ HTTP always runs on port 80. The web browser helps render a variety of data type
   - 500: Internal Server Error
 
 ## The Amazing World of HTML
+
+An example file was added to `code_examples/index.html` that showcases the information summarized below.
+
+### Basic Structure
+
+You start off with a `<!DOCTYPE html>` tag.
+You then add a pair of `<html>` tags with the starting: `<html lang="en">`
+
+The `<html>` tag has 2 pairs of attributes: `<head>` `</head>` and `<body>` `</body>`
+The `<head>` tag has a series of important meta tags. `<meta charset="UTF-8">` is one.
+The `<body>` tag is where you define everything visible in the page.
+
+Void elements are elements that cannot have child elements.
+
+### Styling with CSS
+
+The style attribute in an HTML tag is used to declare CSS styles. You can also add the `<style>` tag in the `<head>` pair of tags. Additionally, you can use the `<link>` tag to include an external CSS file.
+**Example**: `<link rel="stylesheet" href='my_css_sheet.css">`
+
+The ID attribute is to identify an individual HTML tag. The class attribute can be used to identify a series of HTML tags.
+
+### divs and spans
+
+Divs as a container for multiple HTML elements. Spans for inline text.
+
+### Forms
+
+The "primary" way to send user input as a request to a server.
+
+When defining a `<form>` tag, its tradition to also define 2 attributes alongside it: _action_ and _method_. The action attribute defines the destination URL that will be used after the user clicks submit. The method attributes defines whether the http request method. Usually its GET or POST. GET is used for non-sensitive data because its apppended to the URL.
+
+There are many different types of user input: like `<input type: "radio">` and `<input type: "button">`
+The `<label>` tag is used to label input tags using an ID.
+
+You can then use the `<button>` tag with type="submit" to submit a form.
+
+### CSS Box Model
+
+When styling an HTML element, we've ought to keep the box model in mind. You start with the content, which is surrounding with padding, which, in turn, is surrounded with border, before being surrounded with margins. Here's a pic:
+
+![CSS Box Model](images/box-model.png)
