@@ -121,8 +121,116 @@ The `<label>` tag is used to label input tags using an ID.
 
 You can then use the `<button>` tag with type="submit" to submit a form.
 
+## Skiing into CSS
+
+Let's finally learn what this whole CSS stuff is about!
+
 ### CSS Box Model
 
 When styling an HTML element, we've ought to keep the box model in mind. You start with the content, which is surrounding with padding, which, in turn, is surrounded with border, before being surrounded with margins. Here's a pic:
 
 ![CSS Box Model](images/box-model.png)
+
+### CSS Selectors
+
+This seems like a really important topic! 👀
+
+The source for this section is: [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+
+#### Type Selectors
+
+Pretty simple. If you want to style a particular HTML tag/element, you just go:
+
+```css
+h1 {
+  color: blue;
+}
+```
+
+#### Class Selectors
+
+Again, pretty simple.
+
+```css
+.my_class {
+  font-family: Impact;
+}
+```
+
+##### Multiple Classes
+
+In HTML, you can give an element mulitple classes by using a space character. For example:
+
+```html
+<h1 class="foo bar">Hii</h1>
+```
+
+Then, in CSS, you can specify elements with multiple classes with:
+
+```css
+.foo.bar {
+  font: 3em;
+}
+```
+
+##### Type + Class Selectors
+
+You can combine both of them, and select HTML elements that have a particular class.
+
+```css
+h1.my_class {
+  color: red;
+}
+```
+
+#### ID Selectors
+
+Use a hashtag.
+
+```css
+#foo {
+  background-color: purple;
+}
+```
+
+##### Type + ID Selectors
+
+Simple as _THAT_.
+
+```css
+h1#foo {
+  margin: 2;
+}
+```
+
+#### Selector Lists!
+
+To select multiple tags/classes/ID's at once, then you go:
+
+```css
+h1,
+#foo,
+.my_class {
+  margin-top: 10px;
+}
+```
+
+#### UNIVERSAL
+
+The universal selector selects all elements.
+
+```css
+* {
+  color: red;
+}
+```
+
+#### Attribute Selectors
+
+You can select elements with a particular attribute with:
+
+```css
+a[href] {
+  text-decoration: none;
+}
+```
