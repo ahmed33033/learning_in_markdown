@@ -10,7 +10,7 @@ A network is made up of 3 main elements:
 - Routers/Switches that forward data.
 - Physical links that connect routers/swtiches and end devices together.
 
-The general process of sending and receiving data over a network can be simpilified as follows:
+Here's an overly simplistic description of sending and receiving data over a network:
 
 1. An application forms a message, and sends it down to the OS.
 
@@ -20,7 +20,7 @@ The general process of sending and receiving data over a network can be simpilif
 
 4. The OS combines the packets into a whole message using the provided ordering, and sends them up to the application.
 
-![Network Pic](images/network.png)
+![Network Pic](images/basic-network.png)
 
 ### What is a Packet?
 
@@ -51,26 +51,29 @@ Remembered by the abbreviation: **FOR**, for format, order and receipt of messag
 
 In the design of complex systems, we can use layers to encapsulate distinct operations. We can then use these layers to better understand how messages flow between end systems.
 
-- Application Layer: A network application requests the OS to send a message using an API. This request includes the message, information about the destination, and what protocol to use to send the message. Some of the API's that the Application layer includes are the HTTP protocol, which uses HTTP messages that are made up of a header and body. Another API is IMAP - used in email.
+- Application Layer: Concerned with exchanging messages between network applications. Contains a variety of protocols like HTTP and IMAP that send messages using the services of the Transport Layer.
 
-- Transport Layer: Dictates how data is transferred between end-systems. This layer packetizes a message into a series of packets. Packets are mainly sent using the following 2 protocols:
+- Transport Layer: Encapsulating messages with a transport-layer header, creating a **segment**. Encapsulation is mainly performed using one of the following protocols.
 
-  - TCP, which guarantees the delivery and ordering of packets.
-  - UDP, which doesn't provide any guarantees.
+  - TCP, which guarantees the delivery and ordering of packets. TCP segments are called segments.
+  - UDP, which doesn't provide any guarantees. UDP segments are called datagrams.
 
-- Network Layer: Contains the IP protocol and other routing protocols that dictate the route of a packet to its end destination. The IP Protocol, for examples, involves looking up a domain name on a DNS and adds to a packet the IP destination.
+- Network Layer: Encapsulates a segment with a network-layer header containing destination IP address using the IP Protocol, and other routing protocols. This creates a **packet/datagram**. The IP Protocol involves looking up a domain name on a DNS to retreive the IP address + Port Number.
 
-- Link Layer: Wifi vs Ethernet vs Fiber Optic, i.e. how messages are passed between network devices.
+- Link Layer: Encapsulates packets/datagrams with a link-layer header to create a **frame**. This layer contains protocols like WIFI and Ethernet.
 
 - Physical Layer: Bits on the wire, i.e. the physical transmission of bits.
 
-1. So we start off with a message that an end system wants to send.
-2. This message is then packetized into packets, and we decide the format, order and receipt of packets.
-3. Then, we look at the general route a packet will take.
-4. Then, we look at how packets move from one network device to the next.
-5. Finally, we look at the physical transmission of a packet's bits from one network device to the next.
+1. Application Layer is concerned with other network applications.
+2. Transport Layer is concerned with process to process.
+3. Network Layer is concerned with Source to Destination IP.
+4. Link Layer is concerned with neighboring network devices.
 
-### OSI Model
+![Encapsulating a message in a Network](images/encapsulation-network.png)
+
+As a frame, packet or segment flows into a network device, it gets decapsulated up the layers. You can think of encapsulation and decapsulation as working with Russian Dolls.
+
+### OSI & 4 Layer Model
 
 The OSI model is a standard 7-layer model that models how data is sent and received between end devices.
 
@@ -82,6 +85,9 @@ The OSI model is a standard 7-layer model that models how data is sent and recei
 - Layer 2: Link Layer
 - Layer 1: Physical Layer
 
-### Moving Through Layers
+To make it simpler,, these layers can be abstracted into 4, which are:
 
-When a packet moves (down, from the sending device) through each layer, it is wrapped with additional data. When a packet moves up, each wrapper layer is removed. This process resembled Russian Dolls.
+- Application
+- Transport
+- Network
+- Link
