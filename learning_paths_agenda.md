@@ -6,8 +6,6 @@
 
 - the-full-stack-life
 
-- networking-networks
-
 - git-checkout
 
 - langgraph-pregel

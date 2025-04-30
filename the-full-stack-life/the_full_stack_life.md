@@ -234,3 +234,20 @@ a[href] {
   text-decoration: none;
 }
 ```
+
+## Scripting in JavaScript
+
+A language that was reportedly made in 10 days.
+
+It's interpretted at runtime by the browser, which has a runtime interpretter.
+
+- Not exclusive to the client side, it's also in the server side.
+
+Has 6 datatypes:
+
+- string
+- number
+- object
+- function
+- undefined
+- boolean
