@@ -70,3 +70,33 @@ This means that Docker is more lightweight, and only takes a few seconds to star
 </figure>
 
 Buuuut, this hypothetically means that Docker containers that are built for the Linux kernel can't run on Windows. Which is why Docker created Docker Desktop, which comes with its own linux kernel (basically a virtual machine). Docker itself was built for Linux, so Docker Desktop also allows Docker to run on Windows and Mac.
+
+## The commands 🫡
+
+`docker images` gets you the images you locally have.
+
+`docker ps` shows you the running containers (ps for processes)
+
+`docker ps -a` shows you all running containers
+
+`docker pull nginx:1.27.5` pulls nginx Ver.1.27.5 from DockerHub, the official docker registry.
+
+`docker run nginx:1.27.5` runs nginx Ver.1.27.5 as a container, by creating a new container.
+
+> Note: You don't have to pull before running a particular docker image. It's pulled automatically if you don't have it ✨
+
+`docker run -d nginx:1.27.5` does the same, but runs it in the background, so its not blocking the terminal.
+
+`docker run -d -p 3000:80 nginx:1.27.5` binds a docker container port 80 to the local host machine's port of 3000.
+
+`docker run -d -p 3000:80 --name webapp nginx:1.27.5` creates and runs a new docker container with the name _webapp_.
+
+`docker logs afd32$@#$#Sfdjo` gets you the logs of the running nginx with the aforementioned hash.
+
+`docker stop afd32$@#$#Sfdjo` stops the nginx container with the aforementioned hash.
+
+`docker start afd32$@#$#Sfdjo` starts an already created container.
+
+## Registries
+
+We mentioned earlier that docker pull uses the official docker registry: Docker Hub. Companies, however, may use private Docker registries like Amazon ECR to store Docker images. Within docker registries, repositories contain similar images with different versions.
