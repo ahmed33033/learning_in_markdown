@@ -73,30 +73,58 @@ Buuuut, this hypothetically means that Docker containers that are built for the 
 
 ## The commands 🫡
 
-`docker images` gets you the images you locally have.
+- `docker images` gets you the images you locally have.
 
-`docker ps` shows you the running containers (ps for processes)
+- `docker ps` shows you the running containers (ps for processes)
 
-`docker ps -a` shows you all running containers
+- `docker ps -a` shows you all running containers
 
-`docker pull nginx:1.27.5` pulls nginx Ver.1.27.5 from DockerHub, the official docker registry.
+- `docker pull nginx:1.27.5` pulls nginx Ver.1.27.5 from DockerHub, the official docker registry.
 
-`docker run nginx:1.27.5` runs nginx Ver.1.27.5 as a container, by creating a new container.
+- `docker run nginx:1.27.5` runs nginx Ver.1.27.5 as a container, by creating a new container.
 
 > Note: You don't have to pull before running a particular docker image. It's pulled automatically if you don't have it ✨
 
-`docker run -d nginx:1.27.5` does the same, but runs it in the background, so its not blocking the terminal.
+- `docker run -d nginx:1.27.5` does the same, but runs it in the background, so its not blocking the terminal.
 
-`docker run -d -p 3000:80 nginx:1.27.5` binds a docker container port 80 to the local host machine's port of 3000.
+- `docker run -d -p 3000:80 nginx:1.27.5` binds a docker container port 80 to the local host machine's port of 3000.
 
-`docker run -d -p 3000:80 --name webapp nginx:1.27.5` creates and runs a new docker container with the name _webapp_.
+- `docker run -d -p 3000:80 --name webapp nginx:1.27.5` creates and runs a new docker container with the name _webapp_.
 
-`docker logs afd32$@#$#Sfdjo` gets you the logs of the running nginx with the aforementioned hash.
+- `docker logs afd32$@#$#Sfdjo` gets you the logs of the running nginx with the aforementioned hash.
 
-`docker stop afd32$@#$#Sfdjo` stops the nginx container with the aforementioned hash.
+- `docker stop afd32$@#$#Sfdjo` stops the nginx container with the aforementioned hash.
 
-`docker start afd32$@#$#Sfdjo` starts an already created container.
+- `docker start afd32$@#$#Sfdjo` starts an already created container.
 
 ## Registries
 
 We mentioned earlier that docker pull uses the official docker registry: Docker Hub. Companies, however, may use private Docker registries like Amazon ECR to store Docker images. Within docker registries, repositories contain similar images with different versions.
+
+## dockerfile
+
+Docker files begin with a base image. In `docker_app_example`, we dockerize an express.js app. So, our base image will be `node.js`, which includes the JS runtime environment and npm.
+
+- `FROM node:24-alpine3.21` is to set node V.24 as the base image.
+
+- `COPY package.json /app/` and `COPY src /app/` copy the files from the local to the docker container.
+
+- `WORKDIR /app/` sets the working directory to _/app/_, which is kinda like cd'ing into your project root to run npm install and the like.
+
+- `RUN node install` runs the docker command that installs your node dependencies.
+
+- `CMD ["node", "server.js"]` runs the node command to start the container (only one CMD command can exist per dockerfile)
+
+Finally, to build it, yon use the command: `docker build -t first-app:1.0`, where the _-t_ flag specifies the name of the image and its version.
+
+## How Docker fits into development
+
+<figure>
+
+<img src="images/docker_ecosystem.png" alt="Docker ecosystem image">
+
+<figcaption> Source: Docker Crash Course for Absolute Beginners [NEW] by TechWorld with Nana </figcaption>
+
+</figure>
+
+You can see that docker images are built by a CI server, which pushes it ot a private Docker registry, and to a repository. Custom docker containers are then deployed alongside docker containers from the cloud.
