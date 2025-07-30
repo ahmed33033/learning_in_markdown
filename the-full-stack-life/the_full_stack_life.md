@@ -1,6 +1,6 @@
 # The Full-Stack Life
 
-Most of the information here is originally based out of the CSC309 course by Professor Kianoosh. External sources are added where relevant.
+Most of the information here is originally based out of the CSC309 course by Professor Kianoosh. External sources are added where relevant. Clicking images will redirect you to their original source.
 
 ## Computer Talk for Dummies
 
@@ -33,7 +33,10 @@ The internet is composed of a series of connected networks.
 
 The most common/official way that computers communicate data with one another is using the TCP/IP Protocol. This Protocol can be modeled with the _4-layer model_, which helps us better understand it:
 
-![The 4 Layer model for TCP/IP](images/4-layer-model.png)
+<figure>
+<a href="https://medium.com/@kylelzk/networking-theory-understanding-tcp-ip-the-backbone-of-the-internet-c435f50d7a9a"><img src="images/4-layer-model.png" alt="4-layer model"></a>
+<figcaption>Source: Kyle Law, 2023</figcaption>
+</figure>
 
 **Example:**
 
@@ -127,9 +130,12 @@ Let's finally learn what this whole CSS stuff is about!
 
 ### CSS Box Model
 
-When styling an HTML element, we've ought to keep the box model in mind. You start with the content, which is surrounding with padding, which, in turn, is surrounded with border, before being surrounded with margins. Here's a pic:
+When styling an HTML element, we've ought to keep the box model in mind. You start with the **content**, which is surrounding with **padding**, which, in turn, is surrounded with **border**, before being surrounded with **margins**. Here's a pic:
 
-![CSS Box Model](images/box-model.png)
+<figure>
+<img src="https://web.dev/static/learn/css/box-model/image/a-diagram-showing-four-m-af72960a9e79a.svg" alt="box model"/>
+<figcaption>CSS box model from web.dev</figcaption>
+</figure>
 
 ### CSS Selectors
 
