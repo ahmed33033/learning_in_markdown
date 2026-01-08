@@ -1,0 +1,39 @@
+#test-id {
+  color: red;
+}
+
+#elem-selector {
+  background-color: yellow;
+}
+
+[data-boom="yes"] {
+  border: 2px solid black;
+}
+
+div.selectors-div > p {
+  outline: 16px dotted pink;
+}
+
+#next-sibling-ol * + * {
+  font-size: x-small;
+}
+
+/* pseudoelemt is like selecting (or even creating) an element that doesn't exist.
+  pseudoclass is like selecting a class (like :hover) that doesn't exist.
+  */
+#p-first-line::first-line {
+  color: green;
+}
+aside p:hover {
+  background-color: blue;
+}
+
+li ~ p {
+  color: blueviolet;
+}
+
+/* this one wont work, cause it only selects the next sibling*/
+
+li + p {
+  background-color: black;
+}
