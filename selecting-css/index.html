@@ -7,40 +7,54 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <p id="test-id">Hi</p>
-    <section id="elem-selector">
-      <p>i was selected by element.</p>
-    </section>
-    <p data-boom="yes">I was selected by attribute</p>
-    <div class="selectors-div">
-      <p>I was selected as a child of div</p>
-      <ol id="next-sibling-ol">
-        <li>My next siblings will be selected (and made very small)</li>
-        <li>sibling 2</li>
-        <li>sibling 3</li>
-      </ol>
-      <p id="p-first-line">
-        my first line is selected (as a pseudo elements): Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-        consequuntur cumque repudiandae provident. Officia, in itaque necessitatibus sunt excepturi laudantium ab quo
-        nobis nisi officiis, voluptatum inventore reiciendis iusto libero corrupti nostrum distinctio. Molestiae,
-        nostrum, quo aut accusantium blanditiis optio ad at magnam libero, beatae facilis in dolorem soluta consectetur.
-      </p>
-      <aside>
-        <p>you can hover over me bc my hover pseudo class is styled</p>
-      </aside>
-      <ol>
-        <li>here's a different way of doing it (using pseudo-elements)</li>
-        <li>small sibling one</li>
-        <li>small sibling two</li>
-      </ol>
+    <!--Selectors Section-->
+    <details class="selectors-section">
+      <summary>Selectors Playthrough</summary>
+      <p id="test-id">Hi</p>
+      <section id="elem-selector">
+        <p>i was selected by element.</p>
+      </section>
+      <p data-boom="yes">I was selected by attribute</p>
+      <div class="selectors-div">
+        <p>I was selected as a child of div</p>
+        <ol id="next-sibling-ol">
+          <li>My next siblings will be selected (and made very small)</li>
+          <li>sibling 2</li>
+          <li>sibling 3</li>
+        </ol>
+        <p id="p-first-line">
+          my first line is selected (as a pseudo elements): Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+          consequuntur cumque repudiandae provident. Officia, in itaque necessitatibus sunt excepturi laudantium ab quo
+          nobis nisi officiis, voluptatum inventore reiciendis iusto libero corrupti nostrum distinctio. Molestiae,
+          nostrum, quo aut accusantium blanditiis optio ad at magnam libero, beatae facilis in dolorem soluta
+          consectetur.
+        </p>
+        <aside>
+          <p>you can hover over me bc my hover pseudo class is styled</p>
+        </aside>
+        <ol>
+          <li>here's a different way of doing it (using pseudo-elements)</li>
+          <li>small sibling one</li>
+          <li>small sibling two</li>
+        </ol>
 
-      <ul>
-        <li>i will be used to select a subsequent p tag</li>
-        <div>
-          <p>not this one, it's inside a div!</p>
-        </div>
-        <p>this one!</p>
-      </ul>
+        <ul>
+          <li>i will be used to select a subsequent p tag</li>
+          <div>
+            <p>not this one, it's inside a div!</p>
+          </div>
+          <p>this one!</p>
+        </ul>
+      </div>
+    </details>
+    <!--End of Selectors Section-->
+
+    <!--Nesting Section-->
+    <div class="nesting-basic">
+      <p>Hi im nested in a div</p>
+    </div>
+    <div class="nesting-amp">
+      <a href="google.com"></a>
     </div>
   </body>
 </html>

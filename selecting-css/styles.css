@@ -37,3 +37,18 @@ li ~ p {
 li + p {
   background-color: black;
 }
+
+/* Nesting section */
+
+.nesting-basic {
+  p::after {
+    content: "wazzzup im css";
+    color: red;
+  }
+}
+
+.nesting-amp {
+  & button {
+    border: 2px solid salmon;
+  }
+}
