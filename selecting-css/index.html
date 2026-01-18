@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!--Box Model Section-->
+    <details class="box-model-section">
+      <summary>Boxing the Model</summary>
+      <p class="extrinsic">this is extrinsic</p>
+      <p class="intrinsic">this is intrinsic</p>
+      <p class="box-model">Da Box</p>
+      <p class="inline">im some inline text yikes</p>
+      <p class="inline-block">and im some inline-block text wasssuppp</p>
+      <p class="block">finalyyy, im some block text wooooh</p>
+      <p class="inline-block">oh wait what, inline-block again?</p>
+    </details>
     <!--Selectors Section-->
     <details class="selectors-section">
       <summary>Selectors Playthrough</summary>
@@ -50,11 +61,16 @@
     <!--End of Selectors Section-->
 
     <!--Nesting Section-->
-    <div class="nesting-basic">
-      <p>Hi im nested in a div</p>
-    </div>
-    <div class="nesting-amp">
-      <a href="google.com"></a>
-    </div>
+    <details>
+      <summary>Nesting nests</summary>
+      <div class="nesting-basic">
+        <p>Hi im nested in a div</p>
+      </div>
+      <a class="fake-nest" href="google.com">wanna google something </a>
+      <div class="nest-amp-div">
+        <p class="nest-amp-p">hi im a p in a div</p>
+      </div>
+      <p class="nest-amp-p nest-amp-div">hi im a p NOT in a div</p>
+    </details>
   </body>
 </html>

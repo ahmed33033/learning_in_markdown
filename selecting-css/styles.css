@@ -1,3 +1,63 @@
+/* intrinsic vs. extrinsic sizing*/
+.extrinsic,
+.intrinsic {
+  border: 2px solid black;
+}
+
+.extrinsic {
+  color: red;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.intrinsic {
+  color: blue;
+  /* or don't set width */
+  width: min-content;
+}
+
+/* Box Model: content -> padding -> border -> margin*/
+
+.box-model {
+  padding: 20px;
+  border: 20px solid black;
+  margin: 20px;
+  outline: 20px solid hotpink;
+}
+
+/* box-sizing: width means the size of the everything in the border (inclusive)*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* inline: inline, idc about width or height
+    inline-block: inline, but ic about width or height
+    block: gimme all the line (still cares about width and height)*/
+
+.inline,
+.inline-block,
+.block {
+  width: 20px;
+  height: 40px;
+  border: 5px solid black;
+}
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+/* Selectors Section */
+
 #test-id {
   color: red;
 }
@@ -47,8 +107,24 @@ li + p {
   }
 }
 
-.nesting-amp {
-  & button {
-    border: 2px solid salmon;
+/* You can think of the ampersand like the parent selector 
+   It can be added before or after a selector. */
+.fake-nest {
+  /* Special case */
+  a& {
+    color: red;
+  }
+}
+
+/* The space after the ampersand actually matters welp */
+.nest-amp-div {
+  & .nest-amp-p {
+    color: blueviolet;
+  }
+}
+
+.nest-amp-div {
+  &.nest-amp-p {
+    color: violet;
   }
 }
