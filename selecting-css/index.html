@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Practice</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
   </head>
   <body>
     <!--Box Model Section-->
@@ -97,5 +98,21 @@
         Same with initial.
         Unset undoes it back to default (inherit or initial)
     -->
+
+    <details>
+      <summary>Lets get colorful boys</summary>
+      <h2>This section is a bit different because it uses a bit of tailwind and inline styles</h2>
+      <p class="text-red-800">Im colored with color names</p>
+      <p style="color: #abcdef">Im colored with hex</p>
+      <p style="color: #abcdef80">Im colored with 8 digit hex for alpha</p>
+      <p style="color: color(srgb 0.4 0.3 0.9 / 0.5)">
+        Im colored with the color function (color-space x.x x.x x.x / x.x)
+      </p>
+      <p style="color: oklch(50% 50% 240deg)">Im colored with oklch (kinda the recommended way of going about color)</p>
+      <p style="color: color-mix(in oklch longer hue, oklch(50% 30% 50deg) 50%, oklch(50% 80% 30deg) 50%)">
+        Im colored with color mix
+      </p>
+      <p style="color: oklch(from oklch(80% 50% 0.5) calc(l/2) c h)">Im colored with relative color syntax, cool</p>
+    </details>
   </body>
 </html>
