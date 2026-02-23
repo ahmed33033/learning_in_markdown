@@ -2,7 +2,7 @@
 
 ## What is it?
 
-> Source: A tutorial on CDN, available at https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
+> Source 1: A tutorial on CDN, available at https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
 
 Cognitive dimensions is a general tool, in that it's: usable by non-HCI folks (human-computer interaction), and it can be applied to all information systems. It aims to uncover the serious usability issues with an information system.
 
@@ -55,9 +55,9 @@ The framwork also mentions sub-devices, which refer to the sub-devices of an inf
 
 ## The dimensions
 
-> Source: A paper by Blackwell et al., available at: https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf
+> Source 2: A paper by Blackwell et al., available at: https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf
 
-> Source 2 (used sparingly): Introduction to Human-Computer Interaction by Horkbaek et al., available at: https://global.oup.com/academic/product/introduction-to-human-computer-interaction-9780192864543?cc=fi&lang=en&
+> Source 3 (used sparingly): Introduction to Human-Computer Interaction by Horkbaek et al., available at: https://global.oup.com/academic/product/introduction-to-human-computer-interaction-9780192864543?cc=fi&lang=en&
 
 alriii, time to get to the meat and bones of this framework: the dimensions. This seems as the theoretical centerpiece of this framework, as it aims to offer words for usability scenarios.
 
@@ -125,9 +125,9 @@ a user will sometimes guess the purpose of a component in a notation by relating
 
 ### "Diffusness: verbosity of language"
 
-self-explanatory
+how much screen space the notation takes up.
 
-but why was it named diffusness and not just verbosity... i don't know.
+why was it named diffusness and not just verbosity... i don't know.
 
 ### "Hard mental operations: high demand on cognitive resources"
 
@@ -143,4 +143,39 @@ can i, at a particular time, pause, view and get feedback on the work i did?
 
 obvious examples are photo-editing or modelling apps that allow you to save your work or render it at any time.
 
-Source 2 gives a cool example with linters and type checkers which give you feedback while writing code.
+Source 3 gives a cool example with linters and type checkers which give you feedback while writing code.
+
+## Additional Dimensions
+
+### Juxtaposability
+
+> This is mentioned in an older article by Green and Petre - the most cited paper (as of known) about the CDN framework.
+> Source 4: https://www.sciencedirect.com/science/article/pii/S1045926X96900099
+
+This is related to visibility, and it refers to a user's ability to view two components of a system side by side at the same time.
+
+### Creative Ambiguity
+
+The ability to see different ways of doing something within a notation. This is mentioned in Source 2, but also in this chapter from 2005, where it discusses how notation designers leave parts of their notation vauge to encourage creativity.
+
+In the 2005 source, creative ambiguity seems to be looped in with Provisionality, the ability to explore different ways of doing something.
+
+> Source 5: https://scispace.com/pdf/chapter-5-notational-systems-the-cognitive-dimensions-of-4nm1igonbf.pdf
+
+### Free rides
+
+This was a bit more difficult to understand from the sources mentioned, but a 2021 paper provides an easy explanation of it:
+
+> Source 6: https://link.springer.com/article/10.1007/s10849-021-09331-0
+
+In Source 6, it refers to the idea of translating information from one diagram (notation) to another, and how that makes explicit facts there were not originally explicit.
+
+Perhaps a better definition in the world of web-dev is when notations provide a way for users to make explicit hidden or inferred facts. But, this would make it very similar to visiblity and hidden dependencies...
+
+## Pairwise Independence
+
+> Source 1
+
+This refers to the idea that the dimensions are pairwise independent, meaning that you can change a dimension while keeping another constant. However, because of the nature of design and tradeoffs, a third dimension will have to be altered as well.
+
+For example, when writing in Markdown, you can improve the visibility of a system by adding a Markdown preview window, while keeping viscosity constant. However, that knocks down diffuseness as the notation now takes on more screen space.
