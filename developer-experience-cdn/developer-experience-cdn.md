@@ -2,13 +2,11 @@
 
 ## What is it?
 
-> Source: https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
+> Source: A tutorial on CDN, available at https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
 
 Cognitive dimensions is a general tool, in that it's: usable by non-HCI folks (human-computer interaction), and it can be applied to all information systems. It aims to uncover the serious usability issues with an information system.
 
 Dimensions are like different facets of usability.
-
-All forms of interaction are generalized as either building something or modifying it. Those are specified into 4 userclasses below
 
 ### Where it's applied?
 
@@ -20,15 +18,22 @@ It's centered around lexicalisation: naming familiar concepts, so that they be p
 
 ### Classes of User-Activity
 
-The framework defines 4 types of user activity, each of which should prioritize different dimensions.
+The framework defines 6 types of user activity, each of which should prioritize different dimensions.
 
 - Incremenation
-- Transcription
+- Transcription (copying info from one notation to another)
 - Modification
 - Exploratory Design
+- Search\*
+- Incremental Understanding\*
 
-> The tutorial only mentions these two sources. However, [a paper from 2001](),
-> alon
+All forms of interaction are generalized as either building something or modifying it.\*\*
+
+> \*: The sources for these are [a paper from 2001](https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf) by Blackwell et al.
+> Although, the paper does mention that the first 4 are more interesting b/c they involve
+> "extending" the notation.
+
+> \*\*: The source that introduces this framework seems to differentiate between interactive and non-interactive sources. The framework applies to both of them, so the exact difference seems unimportant. I personally found it a bit confusing.
 
 ### Components of Information Systems
 
@@ -47,3 +52,95 @@ Example: For programming languages, notation is the programming languages themse
 The framework mentions layers, which refer to the level of the information system that you're interacting with.
 
 The framwork also mentions sub-devices, which refer to the sub-devices of an information system that can be isolated out.
+
+## The dimensions
+
+> Source: A paper by Blackwell et al., available at: https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf
+
+> Source 2 (used sparingly): Introduction to Human-Computer Interaction by Horkbaek et al., available at: https://global.oup.com/academic/product/introduction-to-human-computer-interaction-9780192864543?cc=fi&lang=en&
+
+alriii, time to get to the meat and bones of this framework: the dimensions. This seems as the theoretical centerpiece of this framework, as it aims to offer words for usability scenarios.
+
+### "Viscosity: resistance to change"
+
+There are two types of viscosity labeled:
+
+#### Repitition Viscosity
+
+How many actions of the same type (repitition) do I need to complete a particular task?
+
+#### Knock-on Viscosity
+
+When you make a change, and further changes are needed to restore "consistency". For example, lets say you had the list:
+
+1. orange
+2. apple
+3. watermelon
+
+If you wanted to add mango between orange and apple, you need to later fix the numbers of apple and watermelon by incrementing them, restoring consistency.
+
+### "Visibility: ability to view components easily"
+
+I wanna see the individual components in my system easily.
+
+### "Premature commitment: contraints on the order of doing things"
+
+this seems to be about systems that force you to do things in a particular order. Example: how you have to call hooks at the top of your component, even if you only use some of them sometime later.
+
+### "Hidden dependencies: important links between entities are not visible"
+
+So when one component depends on another, and changing it will have impact on the other. Are those links visible? This relates to visibility, excepts that the relational component is stressed here.
+
+### "Role-expressiveness: the purpose of an entity is readily inferred"
+
+you can easily tell what the entity does. for example, the name of a React component like "Sidebar" easily tells you what it is: a sidebar.
+
+### "Error-proneness: the notation invites mistakes and the system gives little protection"
+
+self explanatory
+
+### "Abstraction: types and avaialability of abstraction mechanisms"
+
+Abstraction: "definitions of underlying notations" (source 2)
+
+Some abstractions come with an abstraction manager: classes in object-oriented programming langauges. Some do not come with abstraction managers.
+
+The paper mentions an important point: "Systems that allow many abstractions are potentially difficult to learn."
+
+### "Secondary notation: extra information in means other than formal syntax"
+
+When a user needs to do something that isn't in the formal notation, the notatin designer gives user a secondary notation to play around with.
+
+The paper gives an example of code comments, or text formatting options to indicate importance.
+
+### "Closeness of mapping: closeness of representation to domain"
+
+How close the notation is to what it is it's mapping. I like to think an example is like excel spreadsheet to actual spreadsheets, or word documents to actual paper documents.
+
+A web-dev example is maybe jsx, with how you can write javascript code and React components and it still looks like HTML - what it's mapped to
+
+### "Consistency: similar semantics are expressed in similar syntactic forms"
+
+a user will sometimes guess the purpose of a component in a notation by relating it to similar components. this dimension relates to how similar similar components are, and ig vice verse would be included in that too.
+
+### "Diffusness: verbosity of language"
+
+self-explanatory
+
+but why was it named diffusness and not just verbosity... i don't know.
+
+### "Hard mental operations: high demand on cognitive resources"
+
+refers to the amount of info you're keeping in working memory, and how hard you need to work your brain at it
+
+### "Provisionality: degree of commitment to actions or marks"
+
+Can i quickly explore different options of reaching a particular goal? Example is git, and how it has high provisionality by allowing you to create branches, check them out, cherry-pick, and if you don't like the result, just delete the branch.
+
+### "Progressive evaluation: work-to-date can be checked at any time"
+
+can i, at a particular time, pause, view and get feedback on the work i did?
+
+obvious examples are photo-editing or modelling apps that allow you to save your work or render it at any time.
+
+Source 2 gives a cool example with linters and type checkers which give you feedback while writing code.
