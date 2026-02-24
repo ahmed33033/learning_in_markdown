@@ -49,9 +49,19 @@ Example: For programming languages, notation is the programming languages themse
 
 ### Additional Framework Stuff
 
-The framework mentions layers, which refer to the level of the information system that you're interacting with.
+The framework mentions layers, which refer to the level of the information system that you're interacting with. This seems to refer to the combination of notation, environment and medium. The example given in Source 1 refers a computer program as being in one layer, and your keyboard strokes as existing in another layer.
 
-The framwork also mentions sub-devices, which refer to the sub-devices of an information system that can be isolated out.
+buuut.... this seems to be the exact defintion of sub-devices, mentioned below.
+
+Sub-devices refer to the sub-devices of an information system that can be isolated out, as they come with a new notation.
+
+Ok, i'm not sure what's the difference between layers and sub-devices, they seem to refer to the same kind of thing.
+
+Ok, I think layers refer to a pair of notation + environment existing in the same medium. While sub-devices exist on a different medium. buuut.. when it refers to the dimension of abstraction, it discusses an abstraction manager (like keyboard shortcuts) as a sub-device. They still exist on the same medium...
+
+I think the difference between layers and sub-devices is more soft and subjective than technical. If something can be treated in isolation, it's a subdevice. if it's part and parcel of another thing, it's a layer.
+
+in any case, sub-devices seem to be the main object of interest.
 
 ## The dimensions
 
@@ -179,3 +189,58 @@ Perhaps a better definition in the world of web-dev is when notations provide a 
 This refers to the idea that the dimensions are pairwise independent, meaning that you can change a dimension while keeping another constant. However, because of the nature of design and tradeoffs, a third dimension will have to be altered as well.
 
 For example, when writing in Markdown, you can improve the visibility of a system by adding a Markdown preview window, while keeping viscosity constant. However, that knocks down diffuseness as the notation now takes on more screen space.
+
+## Types of Users
+
+Something to note that is indirectly mentioned in the CDN questionairre is the class of users using an application. Are they a beginner, are they an expert? In that sense, they will find different features easier or more difficult.
+
+> Source 7: CDN Tutorial, https://link.springer.com/content/pdf/10.1007/3-540-44617-6_31
+> Source 8: Video, CDN applied to JS: https://www.youtube.com/watch?v=aelyKLi30qg&t=13s
+
+This can be generalized to background of user.
+
+## Previous Applications
+
+This framework seems to traditionally be used to evaluate visual programming languages, as shown by Green's landmark paper about visual languages (Source 4).
+
+### Issues of Applying CDN
+
+> Source 8: https://doi.org/10.1016/j.jvlc.2006.04.006
+
+#### A Tool for Problems, not Correctness
+
+The CDN framework should be used to identify usability problems, not prove that a design is moreso correct.
+
+Does that mean using a radar chart for comparison across notations is fallible?
+
+#### Importance as discussing dimensions based on tradeoffs
+
+This is related to the view that there is no perfect design, it is simply a bunch of tradeoffs.
+
+As such, it's important to discuss the dimensions in terms of the tradeoffs being made. These are technically called "design maneuvers".
+
+#### Adding reinterpretations
+
+The problem with adding reinterpretations to the CD's (cognitive dimensions) is that it no longer becomes a shared vocabulary, and it creates confusion for further discussion.
+
+### Case Studies!
+
+#### Interactive Football Playbook (IFP)
+
+An interactive application that allows coaches to walkthrough American Football plays. In this case, the CDN framework was applied pretty early within the design process: during the paper-prototype stage.
+
+[![Football-paper-prototype](/developer-experience-cdn/images/football-paper-prototype.png)](https://doi.org/10.1016/j.jvlc.2006.04.006)
+
+They used Blackwell's questinairre to drill down on the CDs.
+
+> Source 9: https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDquestionnaire.pdf
+
+How the process worked, is they would hone in on a dimension by going through the questionairre and identifying the issues with the design. Then, once they got to suggesting remedies, this brought up design maneuvers: how can we fix the one design dimension by trading off another design dimension?
+
+An example of this was _visibility_. They realized that, when zooming into the players, the coaches had to use their working memory (extending to _hard mental operations_) to remember the positions of the players outside of the screen. To account for this, they suggested adding another abstraction: a small screen offering a bird's eye view of the play. This screen increased visibility, but it introduced a new sub-device through a new abstraction.
+
+An interesting note is that for some issues, they suggested conducted further interviews to suggest remedies.
+
+Another issue they found with their paper prototype is the non-existence of a secondary notation. They wanted to provide coaches with an "escape from formalism" by allowing them to add notes to formations.
+
+Blackwell's questionnaire also proved useful as it allowed people "with low levels of familiarity with CDs" to pick out issues with the design.
