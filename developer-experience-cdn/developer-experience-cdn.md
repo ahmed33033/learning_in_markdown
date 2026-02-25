@@ -225,11 +225,17 @@ The problem with adding reinterpretations to the CD's (cognitive dimensions) is 
 
 ### Case Studies!
 
+These case studies are derived from Source 8. What's interesting about them is they attempt to analyze two main processes:
+
+1. How the application of CDN differs in the beginning of design, middle of design and end of design process
+
+2. The effectiveness of asking Who, What, How as an extension to the CDN framework.
+
 #### Interactive Football Playbook (IFP)
 
 An interactive application that allows coaches to walkthrough American Football plays. In this case, the CDN framework was applied pretty early within the design process: during the paper-prototype stage.
 
-[![Football-paper-prototype](/developer-experience-cdn/images/football-paper-prototype.png)](https://doi.org/10.1016/j.jvlc.2006.04.006)
+[![Football-paper-prototype](/developer-experience-cdn/images/football-paper-prototype.png)](u)
 
 They used Blackwell's questinairre to drill down on the CDs.
 
@@ -244,3 +250,57 @@ An interesting note is that for some issues, they suggested conducted further in
 Another issue they found with their paper prototype is the non-existence of a secondary notation. They wanted to provide coaches with an "escape from formalism" by allowing them to add notes to formations.
 
 Blackwell's questionnaire also proved useful as it allowed people "with low levels of familiarity with CDs" to pick out issues with the design.
+
+#### Current Adieu
+
+This is a visual language that they had a prototype of, and that they aimed to use CDN to create an improved versin.
+
+[![Adieu Visual Language](/developer-experience-cdn/images/adieu.png)](https://doi.org/10.1016/j.jvlc.2006.04.006)
+
+##### Small Aside About Visual Languages...
+
+As previously mentioned, the CDN framework has been famously used to analyze visual languages. Now, in hindsight, we know that visual languages have never replaced text-based programming.
+
+But... did they fail?
+
+No, we've actually seen many succesful applications of visual languages in particular domains. The famous example is Scratch, and it's power as an educational tool. There are other ones as well, which you can check out here:
+
+> Source 10: https://www.jointjs.com/blog/visual-programming
+
+Also, a domain that visual programming has been succesful in is AI orchestration. Tools like n8n and Langflow have skyrocketed in popularity by allowing non-code folks to encode in common workflows.
+
+Why do visual languages work sometimes?
+
+I think the missing key here is that there needs to be a way to compare a potential tool (like a visual language) to existing, mainstream tools.
+
+It's easy to understand why tools like Scratch and n8n were succesful is because they offered better usability than existing (text-based) solutions.
+
+Limiting yourself to CDN would help you improve a design, but not tell you how it ultimately compares to what's already out there.
+
+Moreover, CDN cannot be used as a comparison tool because it doesn't tell you anything about correctness, as previously mentioned.
+
+---
+
+An interesting point in their work is they used TAG to measure consistency across prototypes. TAG is discussed in the following source:
+
+> Source 11: https://scispace.com/pdf/task-action-grammars-a-model-of-the-mental-representation-of-1k271becjq.pdf
+
+Another interesting point is that, in their case, error-proneness and viscosity was often discussed together. This makes sense becasue if you need to do a lot of work to modify something (viscosity), then it's likely error-prone (will lead to errors). Error-proness was also discussed together with hard-mental operations.
+
+Something that I noticed here and in the previous case-study is that, after going through the questionairre, they seemed to discuss issues usually through multiple dimensions. That is, an issue probably appeared in the questionairre in mulitiple dimensions, so they discussed it in terms of these mutliple dimensions.
+
+#### SkinBuilder
+
+SkinBuilder is a WYSIWYG (What you see is what you get) editor for graphs. It's intended for graphic designers in software dev teams.
+
+[![Skin Builder Graphs](/developer-experience-cdn/images/SkinBuilder.png)](https://doi.org/10.1016/j.jvlc.2006.04.006)
+
+At the end of a design, the CDN evaluators picked up on issues that were related to the intended audience.
+
+For example, they were confused by the rectangular boxes at the top of the interface as they didn't know what they did (role-expressiveness). Also, they had issues with font editing, where they had the `bold` menu item to consist of choices of true and false (closeness of mapping) (lol).
+
+[![skinbuilder bold option](/developer-experience-cdn/images/skinbuilder-bold.png)](https://doi.org/10.1016/j.jvlc.2006.04.006)
+
+A key element here is that they suggested the use of _personas_ as a way to mitigate this. Personas would allow you to detail information about your user (what kind of person they are) and dedicate your product to them.
+
+They also didn't have an undo feature (error-proneness, closeness of mapping). Although these mistakes are funny, one has to remember the importance of conducting user studies (and a CDN analysis) early. In this case, the undo button was a taxing addition, and the team wasn't willing to implement it before the app's release.
