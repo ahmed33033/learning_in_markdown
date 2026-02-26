@@ -323,3 +323,153 @@ So this is a rough sketch of what Dagit et al. CDN analysis might've looked like
 2. go through questionairre and each dimension
 3. consolidate specific issues in dimensions into general issues
 4. Discuss design maneuvers in terms of dimension tradeoffs.
+
+## Applying it on Google Docs!
+
+To practice using the CDN framework, we can apply it on the word processor: Google Docs!
+
+### Who, When, How
+
+- _Who_: Me, an external reviewer, and an avid reviewer of Google Docs
+- _When_: After the product was released... like really after.
+- _How_: Using the CDN questionairre, and Personas
+
+### Persona
+
+Mike Jacobs, about 30 years ago. Works an administrative office job where he spends most of his time editing and reviewing docs, and sometimes creating new ones. He's moderately tech savvy, spending half 4 hours of screen time on his phone, and another 7 hours on his computer. In his free-time, he skateboards around his local park.
+
+![Mike Jacobs](/developer-experience-cdn/images/mike-jacobs.jpg)
+
+### CDN Questionairre
+
+#### Visibility
+
+```
+How easy is it to see or find the
+various parts of the notation while
+it is being created or changed?
+Why? What kind of things are more
+difficult to see or find?
+```
+
+By default, it's pretty easy to see various aspects of the page, especially the place you're editing. You can zoom in and zoom out, and increase or decrease the font size.
+
+However, working on a larger document with many pages, it's hard to keep track of where specific pages are. (Hard mental operaitons). To mitigate this, Google docs offers various design maneuvers.
+
+- (Abstraction) The ability to style headings as Heading 1, Heading 2, etc... such that they appear on the left hand side of your view.
+  - However, that can be tedious (viscosity, premature commitment) if you haven't used headings before, and you want to add it at a later time. But, once again, Google Docs offers the tool _select matching text_ to select matching texts so you can set them all in one go.
+
+- (Abstraction) The Find tool, which allows you to find specific words. However, you still have to remember what words were in the page you were looking for (hard mental operations), and you might have to skip over several false-positives - matching words that weren't in the page you were looking for (viscosity)
+
+```
+If you need to compare or
+combine different parts, can you
+see them at the same time? If not,
+why not?
+```
+
+I guess you can duplicate the tab and position them side by side. You also see the edits being made in one tab on the other (highlighted by a different colored cursor). This is also a similar operation that people do sometimes, so it feels natural.
+
+#### Viscosity
+
+```
+When you need to make changes
+to previous work, how easy is it to
+make the change? Why?
+```
+
+It's pretty easy to make changes to previous work as we're dealing with a WYSIWYG editor. Moreover, when working collaboratively, it's easy to add _comments_ or _edits_ for stuff that you want modified.
+
+You can also edit headings easily by using the option _edit style to matching text_.
+
+```
+Are there particular changes that
+are more difficult or especially
+difficult to make? Which ones?
+```
+
+If you want to bold/highlight/style all specific instances of a word, you have to select each word individually. - There's an addon called Advanced Find & Replace that seems to do this for you.
+
+Also, if you're using footnotes, and you want to refer to an existing footnote, you have to manually add a superscript to a word, which is also tedious. However, it must be noted that referring to the same footnote in a page is not conventional, at least in some citation styles like Chicago (CMS).
+
+Note, I was gonna talk about the ability to use VIM bindings with Google Docs, but then I realized Mike Jacobs (our persona) probably doesn't know VIM.
+
+Mike sometimes tries to space pieces of text equally on a line.
+
+- There's a bit of a hack for this (Novel), where you add a table and hide the outline. The problem with this, however, is that each piece of text is granted the same space, so it's not really equidistant if some text is larger than others. Here's an example:
+
+```
+longer-text    short          short
+```
+
+As shown, each piece of text is allocated 15 spaces, and the spaces between each word are not equal because of the longer first word.
+
+Also, adding captions to images, which is an expected task, isn't that simple in google docs. You have to mess around font styles and even the _drawing_ abstraction.
+
+#### Diffuseness
+
+```
+Does the notation a) let you say
+what you want reasonably briefly,
+or b) is it long-winded? Why?
+What sorts of things take more
+space to describe?
+```
+
+it's a WYSIWYG editor, so it's prety simple. You just type and the words appear on your screen.
+
+There looks like there's even AI integration so it's even brief-er to say what you want lol
+
+#### Hard Mental Operations
+
+```
+What kind of things require the
+most mental effort with this
+notation?
+```
+
+Nothing (that wasn't aforementioned, like in visibility) takes any mental effort. ~~Mike Jacobs can listen to Reddit AMAs while cruising through Google Docs.~~ Although, it's worthwhile to mention that writing itself is sometimes mentally taxing. This isn't really a problem with Google Docs, however, as this problem exists across different mediums.
+
+```
+Do some things seem especially
+complex or difficult to work out in
+your head (e.g. when combining
+several things)? What are they?
+```
+
+No, not realy.
+
+#### Error Proneness
+
+```
+Do some kinds of mistake seem
+particularly common or easy to
+make? Which ones?
+```
+
+I think a lot of mistakes occur with images. When you paste an image into google docs, and you try to move it (a natural, second operation), you can't... That's because the default image formatting option is _in-line_.
+
+- The intended next step is to change the image formatting to _break text_. That works.
+  - However, when you page another image above or below it, one of the images might flow down to the footer of the bage and get cut-off by the page border, instead of flowing on to the next page with the rest of the text.
+
+_Wrap text_ option for images seems the most stable, as errors are bound to happen with other options like break text.
+
+```
+Do you often find yourself making
+small slips that irritate you or
+make you feel stupid? What are
+some examples?
+```
+
+After selecting an image, and if you went to click on the end of the next line, you might accidentally click on the scroll bar, which flings you down several pages.
+
+### Consistency
+
+```
+Are there places where some
+things ought to be similar, but the
+notation makes them different?
+What are they?
+```
+
+If you were to move an image with the formatting option _wrap text_, you get a minimal blue cursor that goes down the text. However, with an image with the formatting option _break text_, you see the whole silhouette of the image moving with you (visibility). The small blue cursor is hard to see, and it's different compared to an adjacent formatting option.
