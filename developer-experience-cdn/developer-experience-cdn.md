@@ -304,3 +304,22 @@ For example, they were confused by the rectangular boxes at the top of the inter
 A key element here is that they suggested the use of _personas_ as a way to mitigate this. Personas would allow you to detail information about your user (what kind of person they are) and dedicate your product to them.
 
 They also didn't have an undo feature (error-proneness, closeness of mapping). Although these mistakes are funny, one has to remember the importance of conducting user studies (and a CDN analysis) early. In this case, the undo button was a taxing addition, and the team wasn't willing to implement it before the app's release.
+
+### Who, When and How
+
+The study that showcased the case-studies emphasised the who, when and how aspects of a CDN analysis.
+
+It's important to remember that the framework provides the means, but not the method of evaluation. This means that it provides a series of concepts and how they relate, without telling you how to apply them. As such, the CDN questionairre created by Blackwell provided a way of applying the framework.
+
+To make that application more complete, Dagit et al. added: who, when and how, as factors of governance. The who refers to who is doing the CDN analysis. The when refers to what part of the design process is the CDN analysis being applied. The how refers to how the CDN framework is being applied (questionairre).
+
+They stressed that the _who_ helps mitigate bias and tunnel vision, the _when_ helps estimate the effectiveness of the CDN analysis, while the _how_ helps ensure that the CDN framework is being used correctly (not to prove correctness of design).
+
+### Structure of CDN Analysis by Dagit et al.
+
+So this is a rough sketch of what Dagit et al. CDN analysis might've looked like.
+
+1. identify who, when and how
+2. go through questionairre and each dimension
+3. consolidate specific issues in dimensions into general issues
+4. Discuss design maneuvers in terms of dimension tradeoffs.
