@@ -447,10 +447,10 @@ particularly common or easy to
 make? Which ones?
 ```
 
-I think a lot of mistakes occur with images. When you paste an image into google docs, and you try to move it (a natural, second operation), you can't... That's because the default image formatting option is _in-line_.
+I think a lot of easy mistakes occur with images. When you paste an image into google docs, and you try to move it (a natural, second operation), it doesn't feel like it's moving... That's because the default image formatting option is _in-line_. This means that the image is formatted in line with the rest of the text. So, if there's no text in the direction you're moving the picture, the picture won't move.
 
 - The intended next step is to change the image formatting to _break text_. That works.
-  - However, when you page another image above or below it, one of the images might flow down to the footer of the bage and get cut-off by the page border, instead of flowing on to the next page with the rest of the text.
+  - However, when you paste another image above or below it, one of the images might flow down to the footer of the bage and get cut-off by the page border, instead of flowing on to the next page with the rest of the text.
 
 _Wrap text_ option for images seems the most stable, as errors are bound to happen with other options like break text.
 
@@ -463,7 +463,24 @@ some examples?
 
 After selecting an image, and if you went to click on the end of the next line, you might accidentally click on the scroll bar, which flings you down several pages.
 
-### Consistency
+#### Closeness of Mapping
+
+```
+How closely related is the notation
+to the result that you are
+describing? Why? (Note that in a
+sub-device, the result may be part
+of another notation, rather than the
+end product).
+```
+
+```
+Which parts seem to be a
+particularly strange way of doing
+or describing something?
+```
+
+#### Consistency
 
 ```
 Are there places where some
@@ -473,3 +490,11 @@ What are they?
 ```
 
 If you were to move an image with the formatting option _wrap text_, you get a minimal blue cursor that goes down the text. However, with an image with the formatting option _break text_, you see the whole silhouette of the image moving with you (visibility). The small blue cursor is hard to see, and it's different compared to an adjacent formatting option.
+
+### Notes while applying CDN questionnaire
+
+- The multiple questions for each dimension sometimes felt redundant because they asked about very similar things. However, I realized that it intends to somewhat reword itself in different ways to better help you remember the components in the system.
+
+- On that note, I feel a lot of my time was spent remembering all the different ways I've used Google docs. As an aid, perhaps one could start by listing out all the different components of the notation before going through the dimensions.
+
+- In that regard, the more components a system has, the more tedious the CDN questionnaire felt.
