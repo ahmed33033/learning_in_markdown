@@ -328,6 +328,8 @@ So this is a rough sketch of what Dagit et al. CDN analysis might've looked like
 
 To practice using the CDN framework, we can apply it on the word processor: Google Docs!
 
+[![google docs editor](/developer-experience-cdn/images/google-docs-1.png)](docs.google.com)
+
 ### Who, When, How
 
 - _Who_: Me, an external reviewer, and an avid reviewer of Google Docs
@@ -474,10 +476,110 @@ of another notation, rather than the
 end product).
 ```
 
+my guess is that Google docs is supposed to mirror a typewriter type of system, where you have a keyboard, and with each key stroke, the letters appear on the paper in front of you.
+
+turns out a lot of typewriters didn't have a real _backspace_, as that button would just move you back one character without erasing anything.
+
+Mike jacobs (about 30 years old) prob didnt use a typewriter, as the computer existed. it makes a lot more sense to discuss the second question (below), where we discuss closeness of mapping to existing products like Microsoft word
+
 ```
 Which parts seem to be a
 particularly strange way of doing
 or describing something?
+```
+
+In terms of closeness of mapping to existing products (Microsoft Word), it feels very similar. the basic setup of a page with a home tab above it displaying text styling options is universal.
+
+#### Role Expressivevness
+
+```
+When reading the notation, is it
+easy to tell what each part is for in
+the overall scheme? Why?
+```
+
+Super niche knitpick, but when you have an _outline_ open on the left hand of your screen, and one of the sections has a comment, it shows up as a `1` indicator next to the section title. If you were to click on it, it doesn't do anything. As a user, i'd expect it to take me to the comments section.
+
+The actual comments section is on the top right of the screen. It's not the most expressive icon in the world, b/c it doesn't exactly look like your round, conventional speech bubble.
+
+![google docs top bar](/developer-experience-cdn/images/google-docs-top-bar.png)
+
+```
+Are there some parts that are
+particularly difficult to interpret?
+Which ones?
+```
+
+Everything seems pretty expressive tbh
+
+```
+Are there parts that you really
+don't know what they mean, but
+you put them in just because it's
+always been that way? What are
+they?
+```
+
+There's also the Gemini icon on the top right, but as gemini becomes increasingly popular, it's become ubiquitious
+
+#### Hidden dependencies
+
+```
+If the structure of the product
+means some parts are closely
+related to other parts, and changes
+to one may affect the other, are
+those dependencies visible? What
+kind of dependencies are hidden?
+```
+
+An example of a dependency is comments. When you add a comment to a piece of text, it's highlighted and the comment appears besides the document mergins. if you click on the yellow text or the comment on the side, either component is highlighted.
+
+Another dependency is heading styles and how updating a style affects all headings, but that's made very explicit, since you have to click the button to update the style.
+
+```
+Do these dependencies stay the
+same, or are there some actions
+that cause them to get frozen? If
+so, what are they?
+```
+
+this reminds of another dependency: heading styles and table of contents. Adding a heading should (expectedly) automatically update a table of contents. However, you actually have to go back to the table contents and click the refresh button to get the latest updates.
+
+- A design maneuver could be to create semantic heading groups that don't show up on the actual document, as they solely exist on the table of contents and the _outline_ list on the left hand side of the screen. This allows a viewer to quickly get a sense of what's in the page before picking the section i wanna check out.
+  - This presents a problem with closeness of mapping since this is a novel solution that some folks may not be familliar with.
+
+```
+In what ways can it get worse
+when you are creating a
+particularly large description?
+```
+
+When you have a very large table of contents, it might flow into a second page, and it becomes hard to understand since there's so many items. I guess that's a problem on the document designer, but yea...
+
+There's no option to hide specific headings from the table of contents. You can remove heading levels, though. Honestly, in terms of consistency and visibility, this seems like the better design maneuver.
+
+### Progressive Evaluation
+
+```
+How easy is it to stop in the
+middle of creating some notation,
+and check your work so far? Can
+you do this any time you like? If
+not, why not?
+```
+
+```
+Can you find out how much
+progress you have made, or check
+what stage in your work you are
+up to? If not, why not?
+```
+
+```
+Can you try out partially-
+completed versions of the
+product? If not, why not?
 ```
 
 #### Consistency
@@ -496,5 +598,33 @@ If you were to move an image with the formatting option _wrap text_, you get a m
 - The multiple questions for each dimension sometimes felt redundant because they asked about very similar things. However, I realized that it intends to somewhat reword itself in different ways to better help you remember the components in the system.
 
 - On that note, I feel a lot of my time was spent remembering all the different ways I've used Google docs. As an aid, perhaps one could start by listing out all the different components of the notation before going through the dimensions.
+  - Lets try that. Here are the components for Google docs:
+    - text editting (WYSIWYG editor, find and replace)
+    - text styling (style, font, size, heading styles)
+    - text formatting (alignment, margins)
+    - images
+    - tables
+    - collaboration (comments, history, share)
 
 - In that regard, the more components a system has, the more tedious the CDN questionnaire felt.
+
+- it definitely feels like 14 dimensions is a loooot. I understand that the 14 dimensions are meant to be hoslitic and cover like >95% of the product. But, for the person conducting the CDN questionnaire, and for the person reading the results, it definitely feels a lot.
+  - Dagit et al. synthesized the questionairre into issues that sometimes touched upon multiple dimensions. They also grouped the issues into sections. This made the analysis a lot more digestible.
+  - If i were to conduct the questionnaire to review multiple products within an ecosystem, i'd wanna cut it down to like... 3 dimensions lol. alri maybe 5 to be more holistic. As a team, however, it does make more sense to go through all dimensions and compare _issues_ to ensure the concise dissemination of results.
+  - im about halfway down the questionnaire, and the dimensions that seem the most important in general are:
+    - visibility: the need to step back and view the system or its subpart in whole.
+    - viscosity: being able to make amends easily
+    - diffusness: being able to make changes concisely
+    - Hard mental operations: being able to create without too much mental complexity
+    - Provisionality: being able to sketch something out quicklky
+    - abstraction: the aides that the system provides to manipulate underlying notations
+  - The aforementioned dimensions will be a lot less heavy-handed, but aim to provide a good enough picture. Moreover, other dimensions may show up (although not entirely) in them:
+    - Error proneness is likely to appear in viscosity, diffusness and hard mental operations.
+    - closeness of mapping is likely to appear in hard mental operations and abstraction.
+    - role expressiveness may appear in visibility, hard mental operations, abstraction
+    - hidden dependencies may appear in visibility, hard mental operations and abstraction
+    - progressive evaluation may appear in provisionality
+    - premature commitment may appear in viscosity and hard mental operations
+    - consistency may appear in abstraction
+    - secondary notation may appera in provisionality
+    - novel may appear in viscosity, diffusness and hard mental operations.
