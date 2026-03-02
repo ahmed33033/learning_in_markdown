@@ -569,6 +569,8 @@ you do this any time you like? If
 not, why not?
 ```
 
+Very easy. you just stop lol
+
 ```
 Can you find out how much
 progress you have made, or check
@@ -576,13 +578,72 @@ what stage in your work you are
 up to? If not, why not?
 ```
 
+yes, bc it's a WYSIWYG editor and you can just scorll
+
 ```
 Can you try out partially-
 completed versions of the
 product? If not, why not?
 ```
 
+Yes.
+
+#### Provisionality
+
+```
+Is it possible to sketch things out
+when you are playing around with
+ideas, or when you aren't sure
+which way to proceed? What
+features of the notation help you
+to do this?
+
+What sort of things can you do
+when you don't want to be too
+precise about the exact result you
+are trying to get?
+```
+
+you can use stuff like bullet points or just rough notes to do that.
+
+You can also add in some headings and fill in some work as you go
+
+Finally, Google Docs has this feature called _tabs_ where you can create multiple tabs within a single document. So you can put your notes on one tab, and do your real work on another. Then, when you export, you can select the specific tab that you'd wanna export
+
+Also, Google docs keeps a history of your document changes, so if you dislike a particular result, you can theoritcally restore a previous version, and you can even restore it as a copy. However I seldom do that. I would imagine Mike Jacobs agrees with me as well.
+
+#### Premature Commitment
+
+```
+When you are working with the
+notation, can you go about the job
+in any order you like, or does the
+system force you to think ahead
+and make certain decisions first?
+
+If so, what decisions do you need
+to make in advance? What sort of
+problems can this cause in your
+work
+```
+
+Yes, you need to be sure if you want to style a particular word or phrase in a particular style. This is because it's tedious (viscosity) to later change the style of every instance of a word. Yes, there are extensions like Advanced Find and Replace, however, if you're really tied up in a jam.
+
+But, for most of everything else, you dont need to make any decisions in advance.
+
 #### Consistency
+
+```
+Where there are different parts of
+the notation that mean similar
+things, is the similarity clear from
+the way they appear? Please give
+examples.
+```
+
+They are usually placed next to each other. Text styling options are placed together in the home tab, text formatting options in the formatting tab, and heading styles next to each other.
+
+A lot of collaborative options are also placed in the same general area: the top right of the screen (history, comments, video/present, share).
 
 ```
 Are there places where some
@@ -592,6 +653,40 @@ What are they?
 ```
 
 If you were to move an image with the formatting option _wrap text_, you get a minimal blue cursor that goes down the text. However, with an image with the formatting option _break text_, you see the whole silhouette of the image moving with you (visibility). The small blue cursor is hard to see, and it's different compared to an adjacent formatting option.
+
+Another knitpick is that the Find and Replace tool is in the edit tab instead of the tools tab, where you can find tools like Word Count and Dictionary
+
+The Gemini tool icon is also placed in a weird place; it's next to the collaborative tool options... oh, i understand the connection. You're collaborating with Gemini, that's why it's there. lol, that's interesting, because I never viewed using AI as collaborating; it's just a tool that gives me output.
+
+- I might move it to the right sidebar, where other tools are shown like Calendar, To do lists and Google Maps. Yes, it might not get the same attention, but it's a better fit imo.
+
+![google docs top right sidebars](/developer-experience-cdn/images/docs-top-right.png)
+
+#### Secondary notation
+
+```
+Is it possible to make notes to
+yourself, or express information
+that is not really recognised as part
+of the notation?
+```
+
+```
+If it was printed on a piece of
+paper that you could annotate or
+scribble on, what would you write
+or draw?
+```
+
+```
+Do you ever add extra marks (or
+colours or format choices) to
+clarify, emphasise or repeat what
+is there already? [If yes: does this
+constitute a helper device? If so,
+please fill in one of the section 5
+sheets describing it]
+```
 
 ### Notes while applying CDN questionnaire
 
