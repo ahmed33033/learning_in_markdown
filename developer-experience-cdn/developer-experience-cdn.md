@@ -671,12 +671,29 @@ that is not really recognised as part
 of the notation?
 ```
 
+yes, these are the comments feature in Google Docs. You can add comments by highlighting a piece of text, and adding additional text about them. You can also add emojis, or go into suggesting mode and suggest changes that visibly appear on the document.
+
+![docs suggesting mode](/developer-experience-cdn/images/docs%20suggesting%20modoe.png)
+
+Moreover, you can share the Google Doc with people and designate them as commenters.
+
+- An issue i noticed is that these functionalities aren't really connected to one another (consistency). You can add comments in editor mode AND suggesting mode, but you can only make suggesting in suggestion mode. moreover, making a suggestion generates a comment with visual artificats on the document.
+  - A design maneuver for consistency is to remove the ability to comment in editor mode. Mike Jacobs is either editting a document or making comments, and seldom doing both at the same time. This way, a user would have to explicitly step into "Suggesting Mode" and highlight text, and adding "suggestions" (the new name for a comment). Then, users would get the suggestions menu, which would give them the ability to optionally added "fixes" (the new name for suggested edits). This motivates users to either explain their suggestion, or explain their suggestion and add a fix. Therefore, there's always an explanation for every suggestion.
+
+- Another issue is that there doesn't seem to be an ability to comment on more general things, like the overall document, structure, or a particular paragraph (visibility, closenesss of mapping)
+  - A design maneuver would be to intelligently detect paragraphs, and provide markers on the top left to write overall comments. The same could be done for the top/end of a document.
+
+- Also, it's not quite visible when you're in suggesting mode.
+  - I would put a nice "suggesting mode" label at the top bar of Google docs
+
 ```
 If it was printed on a piece of
 paper that you could annotate or
 scribble on, what would you write
 or draw?
 ```
+
+Corrections, suggested edits in terms of structure, points.
 
 ```
 Do you ever add extra marks (or
@@ -687,6 +704,50 @@ constitute a helper device? If so,
 please fill in one of the section 5
 sheets describing it]
 ```
+
+Yes, adding bold or other text-style options. Not really a helper-device, as it's a core feature of this particular notation (WYSIWYG).
+
+#### Abstraction
+
+```
+Does the system give you any way
+of defining new facilities or terms
+within the notation, so that you
+can extend it to describe new
+things or to express your ideas
+more clearly or succinctly? What
+are they?
+```
+
+Heading styles are a big one. Tables another obvious one.
+
+Also Google Doc extensions, although, I wouldn't imagine Mike Jacobs would be too into that.
+
+```
+Does the system insist that you
+start by defining new terms before
+you can do anything else? What
+sort of things?
+
+If you wrote here, you have a
+redefinition device: please fill in
+one of the section 5 sheets
+describing it.
+```
+
+No, you can just run at it and start typing.
+
+#### Novel
+
+```
+Do you find yourself using this
+notation in ways that are unusual,
+or ways that the designer might
+not have intended? If so, what are
+some examples?
+```
+
+The ability to comments on more general artifacts of a notation, and the ability to add multiple images to a page with "break line" option were the two things that appeared in the analysis, they were mentioned in consistency and secondary notation, respectively.
 
 ### Notes while applying CDN questionnaire
 
@@ -713,6 +774,7 @@ sheets describing it]
     - Hard mental operations: being able to create without too much mental complexity
     - Provisionality: being able to sketch something out quicklky
     - abstraction: the aides that the system provides to manipulate underlying notations
+    - secondary notation: the ability to add notes/remarks about the system, especially to facilitate collaboration.
   - The aforementioned dimensions will be a lot less heavy-handed, but aim to provide a good enough picture. Moreover, other dimensions may show up (although not entirely) in them:
     - Error proneness is likely to appear in viscosity, diffusness and hard mental operations.
     - closeness of mapping is likely to appear in hard mental operations and abstraction.
@@ -721,5 +783,34 @@ sheets describing it]
     - progressive evaluation may appear in provisionality
     - premature commitment may appear in viscosity and hard mental operations
     - consistency may appear in abstraction
-    - secondary notation may appera in provisionality
+    - ~~secondary notation may appera in provisionality~~ (Moved up)
     - novel may appear in viscosity, diffusness and hard mental operations.
+
+- In the CDN questionnaire, Blackwell discusses "Helper devices" and "Redefinition Devices as well". Helper devices appear in secondary notation, and they're stuff like the Find tool which help give you shortcuts for doing stuff. I think they can be thought of as abstractions as well. Redefinition devices, on the other hand, are definitely redefinition devices, as they present a new definition for underlying notation (classes - defining the blueprint for an object in OOP). Blackwell presents a shorter questionairre to be completed for each sub-device.
+  - This was also ignored, as it felt too tedious, especially when it involved applying all 14 dimensions.
+
+### Issues
+
+Alright, time to group the aforementioned points in each dimension into issues. Here, i focus on the "main" issues, not less significant ones that are involved with just one notation.
+
+#### Structural Changes to a Document
+
+(Visibility, Viscosity, Abstraction, Secondary Notation)
+
+Google docs seems to be mostly concerned with editting text, which makes sense for a text editor. However, Mike Jacobs uses Google docs to compose larger documents, and he reviews large documents as well. He would like features that allow him to specify and make structural changes to documents.
+
+- One of the first examples mentioned of strucutral changes is to semantically label a group of heading-sections. Especially in the table of contents, you want to label that Heading 1,2,3 are all part of "Introduction", for example. The only way to implement this currently is to add a heading, but sometimes that's redundant, as the heading is solely used as a semantic grouping mechanism.
+
+- Another example was the ability to add suggestions to paragraphs, or an entire document. Currenlty, comments/suggestions seem limitted to a particular chunk of text.
+
+- Finally, it would be nice for Google Docs to automatically pick up headings when they haven't explicitly been designated as such.
+
+#### Special Text/Image Features
+
+(Viscosity, closeness of mapping)
+
+Google docs lacks some (more niche, but ig that's why Microsoft Word exists as a more feature-complete package) text/image features. Some of them are:
+
+- The ability to attribute text to the same footnote
+- The ability to add captions to images
+- The ability to equidistantly space text across a line (for name, date, title)
