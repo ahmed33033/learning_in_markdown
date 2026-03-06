@@ -2,9 +2,7 @@
 
 ## What is it?
 
-> Source 1: A tutorial on CDN, available at https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
-
-Cognitive dimensions is a general tool, in that it's: usable by non-HCI folks (human-computer interaction), and it can be applied to all information systems. It aims to uncover the serious usability issues with an information system.
+Cognitive dimensions is a general tool[^1], in that it's: usable by non-HCI folks (human-computer interaction), and it can be applied to all information systems. It aims to uncover the serious usability issues with an information system.
 
 Dimensions are like different facets of usability.
 
@@ -24,16 +22,15 @@ The framework defines 6 types of user activity, each of which should prioritize 
 - Transcription (copying info from one notation to another)
 - Modification
 - Exploratory Design
-- Search\*
-- Incremental Understanding\*
+- Search[^2]
+- Incremental Understanding[^2]
 
-All forms of interaction are generalized as either building something or modifying it.\*\*
+All forms of interaction are generalized as either building something or modifying it.[^1]
 
-> \*: The sources for these are [a paper from 2001](https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf) by Blackwell et al.
 > Although, the paper does mention that the first 4 are more interesting b/c they involve
 > "extending" the notation.
 
-> \*\*: The source that introduces this framework seems to differentiate between interactive and non-interactive sources. The framework applies to both of them, so the exact difference seems unimportant. I personally found it a bit confusing.
+> The source that introduces this framework seems to differentiate between interactive and non-interactive sources. The framework applies to both of them, so the exact difference seems unimportant. I personally found it a bit confusing.
 
 ### Components of Information Systems
 
@@ -49,7 +46,7 @@ Example: For programming languages, notation is the programming languages themse
 
 ### Additional Framework Stuff
 
-The framework mentions layers, which refer to the level of the information system that you're interacting with. This seems to refer to the combination of notation, environment and medium. The example given in Source 1 refers a computer program as being in one layer, and your keyboard strokes as existing in another layer.
+The framework mentions layers, which refer to the level of the information system that you're interacting with. This seems to refer to the combination of notation, environment and medium. The example given[^1] refers to a computer program as being in one layer, and your keyboard strokes as existing in another layer.
 
 buuut.... this seems to be the exact defintion of sub-devices, mentioned below.
 
@@ -65,11 +62,7 @@ in any case, sub-devices seem to be the main object of interest.
 
 ## The dimensions
 
-> Source 2: A paper by Blackwell et al., available at: https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf
-
-> Source 3 (used sparingly): Introduction to Human-Computer Interaction by Horkbaek et al., available at: https://global.oup.com/academic/product/introduction-to-human-computer-interaction-9780192864543?cc=fi&lang=en&
-
-alriii, time to get to the meat and bones of this framework: the dimensions. This seems as the theoretical centerpiece of this framework, as it aims to offer words for usability scenarios.
+alriii, time to get to the meat and bones[^2][^3] of this framework: the dimensions. This seems as the theoretical centerpiece of this framework, as it aims to offer words for usability scenarios.
 
 ### "Viscosity: resistance to change"
 
@@ -111,7 +104,7 @@ self explanatory
 
 ### "Abstraction: types and avaialability of abstraction mechanisms"
 
-Abstraction: "definitions of underlying notations" (source 2)
+Abstraction: "definitions of underlying notations"[^2]
 
 Some abstractions come with an abstraction manager: classes in object-oriented programming langauges. Some do not come with abstraction managers.
 
@@ -153,30 +146,25 @@ can i, at a particular time, pause, view and get feedback on the work i did?
 
 obvious examples are photo-editing or modelling apps that allow you to save your work or render it at any time.
 
-Source 3 gives a cool example with linters and type checkers which give you feedback while writing code.
+Source 3 gives a cool example with linters and type checkers which give you feedback while writing code.[^3]
 
 ## Additional Dimensions
 
 ### Juxtaposability
 
 > This is mentioned in an older article by Green and Petre - the most cited paper (as of known) about the CDN framework.
-> Source 4: https://www.sciencedirect.com/science/article/pii/S1045926X96900099
 
-This is related to visibility, and it refers to a user's ability to view two components of a system side by side at the same time.
+This is related to visibility[^4], and it refers to a user's ability to view two components of a system side by side at the same time.
 
 ### Creative Ambiguity
 
 The ability to see different ways of doing something within a notation. This is mentioned in Source 2, but also in this chapter from 2005, where it discusses how notation designers leave parts of their notation vauge to encourage creativity.
 
-In the 2005 source, creative ambiguity seems to be looped in with Provisionality, the ability to explore different ways of doing something.
-
-> Source 5: https://scispace.com/pdf/chapter-5-notational-systems-the-cognitive-dimensions-of-4nm1igonbf.pdf
+In a 2005 source[^5], creative ambiguity seems to be looped in with Provisionality, the ability to explore different ways of doing something.
 
 ### Free rides
 
-This was a bit more difficult to understand from the sources mentioned, but a 2021 paper provides an easy explanation of it:
-
-> Source 6: https://link.springer.com/article/10.1007/s10849-021-09331-0
+This was a bit more difficult to understand from the sources mentioned, but a 2021 paper[^6] provides an easy explanation of it.
 
 In Source 6, it refers to the idea of translating information from one diagram (notation) to another, and how that makes explicit facts there were not originally explicit.
 
@@ -184,18 +172,13 @@ Perhaps a better definition in the world of web-dev is when notations provide a 
 
 ## Pairwise Independence
 
-> Source 1
-
-This refers to the idea that the dimensions are pairwise independent, meaning that you can change a dimension while keeping another constant. However, because of the nature of design and tradeoffs, a third dimension will have to be altered as well.
+This refers to the idea[^1] that the dimensions are pairwise independent, meaning that you can change a dimension while keeping another constant. However, because of the nature of design and tradeoffs, a third dimension will have to be altered as well.
 
 For example, when writing in Markdown, you can improve the visibility of a system by adding a Markdown preview window, while keeping viscosity constant. However, that knocks down diffuseness as the notation now takes on more screen space.
 
 ## Types of Users
 
-Something to note that is indirectly mentioned in the CDN questionairre is the class of users using an application. Are they a beginner, are they an expert? In that sense, they will find different features easier or more difficult.
-
-> Source 7: CDN Tutorial, https://link.springer.com/content/pdf/10.1007/3-540-44617-6_31
-> Source 8: Video, CDN applied to JS: https://www.youtube.com/watch?v=aelyKLi30qg&t=13s
+Something to note that is indirectly mentioned in the CDN questionairre is the class of users using an application. Are they a beginner, are they an expert? In that sense, they will find different features easier or more difficult.[^7][^8]
 
 This can be generalized to background of user.
 
@@ -203,9 +186,7 @@ This can be generalized to background of user.
 
 This framework seems to traditionally be used to evaluate visual programming languages, as shown by Green's landmark paper about visual languages (Source 4).
 
-### Issues of Applying CDN
-
-> Source 8: https://doi.org/10.1016/j.jvlc.2006.04.006
+### Issues of Applying CDN[^9]
 
 #### A Tool for Problems, not Correctness
 
@@ -237,9 +218,7 @@ An interactive application that allows coaches to walkthrough American Football 
 
 [![Football-paper-prototype](/developer-experience-cdn/images/football-paper-prototype.png)](u)
 
-They used Blackwell's questinairre to drill down on the CDs.
-
-> Source 9: https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDquestionnaire.pdf
+They used Blackwell's questinairre[^10] to drill down on the CDs.
 
 How the process worked, is they would hone in on a dimension by going through the questionairre and identifying the issues with the design. Then, once they got to suggesting remedies, this brought up design maneuvers: how can we fix the one design dimension by trading off another design dimension?
 
@@ -263,9 +242,7 @@ As previously mentioned, the CDN framework has been famously used to analyze vis
 
 But... did they fail?
 
-No, we've actually seen many succesful applications of visual languages in particular domains. The famous example is Scratch, and it's power as an educational tool. There are other ones as well, which you can check out here:
-
-> Source 10: https://www.jointjs.com/blog/visual-programming
+No, we've actually seen many succesful applications of visual languages in particular domains. The famous example is Scratch, and it's power as an educational tool. There are other ones as well, which you can check out here.[^11]
 
 Also, a domain that visual programming has been succesful in is AI orchestration. Tools like n8n and Langflow have skyrocketed in popularity by allowing non-code folks to encode in common workflows.
 
@@ -281,9 +258,7 @@ Moreover, CDN cannot be used as a comparison tool because it doesn't tell you an
 
 ---
 
-An interesting point in their work is they used TAG to measure consistency across prototypes. TAG is discussed in the following source:
-
-> Source 11: https://scispace.com/pdf/task-action-grammars-a-model-of-the-mental-representation-of-1k271becjq.pdf
+An interesting point in their work is they used TAG[^12] to measure consistency across prototypes.
 
 Another interesting point is that, in their case, error-proneness and viscosity was often discussed together. This makes sense becasue if you need to do a lot of work to modify something (viscosity), then it's likely error-prone (will lead to errors). Error-proness was also discussed together with hard-mental operations.
 
@@ -947,3 +922,29 @@ Alrii, when it comes to applying this framework on AI frameworks, here are the g
 7. Synthesize analysis into higher-order issues.
 
 8. Add high-level summary of personal thoughts for each framework.
+
+## References
+
+[^1]: A tutorial on CDN. https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDtutorial.pdf
+
+[^2]: Blackwell, A. et al. (2001). Cognitive Dimensions of Notations: Design Tools for Cognitive Technology. https://www.cl.cam.ac.uk/~afb21/publications/CT2001.pdf
+
+[^3]: Hornbæk, K. et al. Introduction to Human-Computer Interaction. https://global.oup.com/academic/product/introduction-to-human-computer-interaction-9780192864543
+
+[^4]: Green, T.R.G. & Petre, M. Usability Analysis of Visual Programming Environments. https://www.sciencedirect.com/science/article/pii/S1045926X96900099
+
+[^5]: Chapter 5: Notational Systems - The Cognitive Dimensions. https://scispace.com/pdf/chapter-5-notational-systems-the-cognitive-dimensions-of-4nm1igonbf.pdf
+
+[^6]: 2021 Paper on Free Rides. https://link.springer.com/article/10.1007/s10849-021-09331-0
+
+[^7]: CDN Tutorial. https://link.springer.com/content/pdf/10.1007/3-540-44617-6_31
+
+[^8]: Video: CDN applied to JavaScript. https://www.youtube.com/watch?v=aelyKLi30qg&t=13s
+
+[^9]: Dagit, J. et al. Issues of Applying CDN. https://doi.org/10.1016/j.jvlc.2006.04.006
+
+[^10]: Blackwell, A. CDN Questionnaire. https://www.cl.cam.ac.uk/~afb21/CognitiveDimensions/CDquestionnaire.pdf
+
+[^11]: Visual Programming Languages. https://www.jointjs.com/blog/visual-programming
+
+[^12]: Task-Action Grammars (TAG). https://scispace.com/pdf/task-action-grammars-a-model-of-the-mental-representation-of-1k271becjq.pdf
