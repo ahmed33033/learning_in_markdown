@@ -498,8 +498,6 @@ easy to tell what each part is for in
 the overall scheme? Why?
 ```
 
-Super niche knitpick, but when you have an _outline_ open on the left hand of your screen, and one of the sections has a comment, it shows up as a `1` indicator next to the section title. If you were to click on it, it doesn't do anything. As a user, i'd expect it to take me to the comments section.
-
 The actual comments section is on the top right of the screen. It's not the most expressive icon in the world, b/c it doesn't exactly look like your round, conventional speech bubble.
 
 ![google docs top bar](/developer-experience-cdn/images/google-docs-top-bar.png)
@@ -801,7 +799,7 @@ Google docs seems to be mostly concerned with editting text, which makes sense f
 
 - One of the first examples mentioned of strucutral changes is to semantically label a group of heading-sections. Especially in the table of contents, you want to label that Heading 1,2,3 are all part of "Introduction", for example. The only way to implement this currently is to add a heading, but sometimes that's redundant, as the heading is solely used as a semantic grouping mechanism.
 
-- Another example was the ability to add suggestions to paragraphs, or an entire document. Currenlty, comments/suggestions seem limitted to a particular chunk of text.
+- Another example was the ability to add suggestions to paragraphs, or an entire document. Currently, comments/suggestions seem limitted to a particular chunk of text.
 
 - Finally, it would be nice for Google Docs to automatically pick up headings when they haven't explicitly been designated as such.
 
@@ -814,3 +812,138 @@ Google docs lacks some (more niche, but ig that's why Microsoft Word exists as a
 - The ability to attribute text to the same footnote
 - The ability to add captions to images
 - The ability to equidistantly space text across a line (for name, date, title)
+
+#### Images
+
+(Viscosity, Consistency, Visibility)
+
+Images with the formatting option "Break Text" needed to be more responsive.
+
+- Ensure multiple images can be pasted into a single page, with overflow leading to images being pushed to a second page.
+
+Morever, images with the formatting option "inline" need to be more consistent with other formatting options.
+
+- Generate a blue, temporary shadow when moving images with the "inline" formatting option.
+
+#### Comments and Suggestions
+
+(Consistency, Visibility, Secondary Notation)
+
+Comments and suggestions seem like an after-thought; an extra feature that some users may find beneficial. However, comments should be treated as crucial for facilitating collaboration and explaining your thought-process while creating a document.
+
+- Create an explicit "Suggestion Mode" that disables rich text-editing features, which also provides the only way of adding comments.
+- Allow comments to be added to paragraphs and essays, as aforementioned in [Structural Changes To a Document](structural-changes-to-a-document)
+- Unify comments and suggestions into one option: "Suggestions". Adding a suggestion displays a submenu where you can add a long-text input: description. The submenu would also contain a second input field where users can add in their suggested change.
+- Add the semantic "Thoughts" option which enables writers to add their thoughts/reasoning to particular excerpts or sections of the document. This submenu would be similar to "Suggestions", except without the second input field with the suggested edits.
+
+## Thoughts and Next Steps
+
+### Thoughts
+
+Alright, after this research, I've enjoyed using CDN, and I believe it can be used to review AI Frameworks (my next step). It's lightweight (not complex), broad, and I think it will be easily understandable by folks unfamilliar with the framework.
+
+---
+
+Looking back, I feel like I missed thinking about using Google Docs (my practice case-study) in terms of the [6 types of user-interaction](#classes-of-user-activity), like incrementation, searching, incremental understanding and transcription.
+
+This was mentioned in my [case-study's notes](#notes-while-applying-cdn-questionnaire), but a lot of time was spent remembering all the ways i used the notation. Perhaps this can be combined with the types of user interaction in the following manner:
+
+##### User Activities
+
+- Incrementation
+  - Adding text
+  - Adding images
+- Modification
+  - Editting text
+  - Styling text
+  - Removing images
+- Incremental Understanding
+  - Table of Contents
+
+and so on and so forth.
+
+---
+
+Design maneuvers should be explicitly separated from the actual CDN analysis. Perhaps points of analysis within a dimension can be numbered, and a subsection within a dimension can discuss possible design maneuvers. I was also thinking about adding positive/negative labels, but I think that's too binary, and it doesn't play nicely into the idea of "tradeoffs" within the CDN framework.
+
+The more holistic [issues](#issues) section, howeover, is free to talk about issues and design maneuvers more connectively.
+
+Sample Format for CDN analysis:
+
+/#### Dimension
+
+1. Analysis one: ...
+2. Analysis two: ...
+3. Analysis three: ...
+
+/#### Alternate Design Maneuvers
+
+(This section goes through selected points and suggests alternate design maneuvers)
+
+2. Alternate design maneuver 2: ...
+
+- Dimensions improved
+- Dimensions impaired
+
+3. Alternate design maneuver 3: ...
+
+- Dimensions improved
+- Dimensions impaired
+
+---
+
+Using peronas and the Who, what, how proved helpful in maintaining focus during the analysis.
+
+Personas may perhaps be a bit too abstract. When applying the CDN framework to review AI frameworks, it might be better to create the same, moderately complex product and use that as the persona. This way, we're limitting our scope to the framework details that involved in making that particular product.
+
+In this regard, the product that should be made should be something common, and it should be used to fill in the user activities mentioned [here](#user-activities).
+
+### Critiques
+
+My biggest critiques with the framework are:
+
+- As it stands, it's expensive (in terms of time) to implement. If you've got a feature-rich notation like Google Docs, you're spending hours completing the CDN analysis. This is understandable, as it's a product of the CDN framework's purpose: a tool that aims to broadly analyze the usability of (almost) all aspects of an application.
+  - This is why I plan on cutting it by half essentially, by focusing on only 7 dimensions. Not only does this make CDN's application cheaper, it also makes it easier disseminating the raw analysis, since there will only be 7 sections to it.
+  - Also, I don't plan on analyzing sub-devices individually, mostly for the reasons stated above.
+
+- The framework, although simple, uses overly scientific terminology.
+  - Notations... Dimensions... Viscosity... Diffuseness.. Provisionality... Premature Commitment.. I mean comon, it doesn't have to be that scientific. I understand that researchers came up with these terms, but they're really too awkward, especially if the primary audience will be non-researchers and software developers.
+  - This is why when I apply the framework again, I intend on solely subbing out the names of these terms for simpler ones. However, as noted by Dagit et al., it will be important to retain the same meanings of these terms to ensure no one's confused by what they refer to.
+
+- Not really a critique of the framework, but it doesn't seem to be that popular (anymore).
+  - This neccesitates a "in a nutshell" summary of it before applying it. Thankfully, the framework is simple enough to dissolve itself into a nutshell.
+
+- Dagit et al. mentions that the CDN framework is used to spot problems, not prove correctness. Buuut the idea of a "problem" suggests that something is less correct than some other thing that's "not a problem". That's also what the CDN framework is used to do: get rid of usability problems.
+  - I think we can say that the CDN framework is a tool used to create alternate designs that aim to improve product usability. As such, we can create a better logical divide between what the CDN framework does, and what it tries to acheive.
+    - What it does: Help create alternate designs of notations through a shared vocabulary of usability dimensions.
+    - What it achieves (BUT NOT DOES): improve product usability. Product usability can then be measured using other usability tools, like SUS (system usability scale).
+
+### Next Steps
+
+Alrii, when it comes to applying this framework on AI frameworks, here are the general steps I would take:
+
+1. Explain the framework in a nutshell.
+
+- What it is
+
+- Purpose
+
+- My changes:
+  - Translation of dimension names into simpler ones
+  - Looping in subdevices with the analysis of the main notation
+
+- Include a discussion of who, when and how. Who and how can be fixed up above, while when can be added for each framework.
+
+2. Explain the general product to be implemented (substitute for persona).
+
+3. Introduce AI framework.
+
+4. Implement product while filling in user-activities.
+
+5. Analyze framework in terms of selected dimensinos and user-activities.
+
+6. For each chosen point of analysis, discuss alternate designs, along with dimensions impacted
+
+7. Synthesize analysis into higher-order issues.
+
+8. Add high-level summary of personal thoughts for each framework.
