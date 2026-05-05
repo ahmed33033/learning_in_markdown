@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Box Model Section-->
+    <details class="box-model-section">
+      <summary>Boxing the Model</summary>
+      <p class="extrinsic">this is extrinsic</p>
+      <p class="intrinsic">this is intrinsic</p>
+      <p class="box-model">Da Box</p>
+      <p class="inline">im some inline text yikes</p>
+      <p class="inline-block">and im some inline-block text wasssuppp</p>
+      <p class="block">finalyyy, im some block text wooooh</p>
+      <p class="inline-block">oh wait what, inline-block again?</p>
+    </details>
+    <!--Selectors Section-->
+    <details class="selectors-section">
+      <summary>Selectors Playthrough</summary>
+      <p id="test-id">Hi</p>
+      <section id="elem-selector">
+        <p>i was selected by element.</p>
+      </section>
+      <p data-boom="yes">I was selected by attribute</p>
+      <div class="selectors-div">
+        <p>I was selected as a child of div</p>
+        <ol id="next-sibling-ol">
+          <li>My next siblings will be selected (and made very small)</li>
+          <li>sibling 2</li>
+          <li>sibling 3</li>
+        </ol>
+        <p id="p-first-line">
+          my first line is selected (as a pseudo elements): Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+          consequuntur cumque repudiandae provident. Officia, in itaque necessitatibus sunt excepturi laudantium ab quo
+          nobis nisi officiis, voluptatum inventore reiciendis iusto libero corrupti nostrum distinctio. Molestiae,
+          nostrum, quo aut accusantium blanditiis optio ad at magnam libero, beatae facilis in dolorem soluta
+          consectetur.
+        </p>
+        <aside>
+          <p>you can hover over me bc my hover pseudo class is styled</p>
+        </aside>
+        <ol>
+          <li>here's a different way of doing it (using pseudo-elements)</li>
+          <li>small sibling one</li>
+          <li>small sibling two</li>
+        </ol>
+
+        <ul>
+          <li>i will be used to select a subsequent p tag</li>
+          <div>
+            <p>not this one, it's inside a div!</p>
+          </div>
+          <p>this one!</p>
+        </ul>
+      </div>
+    </details>
+    <!--End of Selectors Section-->
+
+    <!--Nesting Section-->
+    <details>
+      <summary>Nesting nests</summary>
+      <div class="nesting-basic">
+        <p>Hi im nested in a div</p>
+      </div>
+      <a class="fake-nest" href="google.com">wanna google something </a>
+      <div class="nest-amp-div">
+        <p class="nest-amp-p">hi im a p in a div</p>
+      </div>
+      <p class="nest-amp-p nest-amp-div">hi im a p NOT in a div</p>
+    </details>
+
+    <!--Cascase Section-->
+    <!--Mostly skipped because its kinda review
+        Element styles are applied to elements based on:
+          - order (later the better)
+          - specificity
+          - Importance (normal rules vs animation vs. !important)
+          - Origin (rules with !important are diff origin)
+    -->
+
+    <!--Specificity Section-->
+    <!--Skipped as well, its review
+        Specificity of selectors can be modelled by (A, B, C),
+          - A refers to ID like
+          - B refers to class like
+          - C refers to element like
+        For example, a.some-class has specificity (0, 1, 1)
+    -->
+    <!--Inheritance Section-->
+    <!--Skipped as well.
+        Some properties are inherited by default, some are not.
+        You can assign a property inherit to have it inherit.
+        Same with initial.
+        Unset undoes it back to default (inherit or initial)
+    -->
+
+    <details>
+      <summary>Lets get colorful boys</summary>
+      <h2>This section is a bit different because it uses a bit of tailwind and inline styles</h2>
+      <p class="text-red-800">Im colored with color names</p>
+      <p style="color: #abcdef">Im colored with hex</p>
+      <p style="color: #abcdef80">Im colored with 8 digit hex for alpha</p>
+      <p style="color: color(srgb 0.4 0.3 0.9 / 0.5)">
+        Im colored with the color function (color-space x.x x.x x.x / x.x)
+      </p>
+      <p style="color: oklch(50% 50% 240deg)">Im colored with oklch (kinda the recommended way of going about color)</p>
+      <p style="color: color-mix(in oklch longer hue, oklch(50% 30% 50deg) 50%, oklch(50% 80% 30deg) 50%)">
+        Im colored with color mix
+      </p>
+      <p style="color: oklch(from oklch(80% 50% 0.5) calc(l/2) c h)">Im colored with relative color syntax, cool</p>
+    </details>
+
+    <!--Sizing Section-->
+    <!--Skipped, its easy.
+    em is relative to calculated font. rem is relative to root font.
+    px for pixels, in for inch, cm for centimeters, 
+    you've also got some viewport ones, like lvh (large viewport height) and dvw (dynamic viewport width),
+    and container ones like cqw (container query width)-->
+  </body>
+</html>
